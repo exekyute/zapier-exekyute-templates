@@ -44,6 +44,14 @@ Morning standup - Jun 2, 2026
 🟢 GREEN (2): Vendor portal migration, Newsletter relaunch
 ```
 
+## Try it yourself
+
+This workflow is published as a Zapier guided template. You can copy it into your own Zapier account:
+
+[Get the Zap template](PASTE_YOUR_ZAPIER_TEMPLATE_LINK)
+
+You connect your own Notion, Slack, and Storage, then drop in your own Notion database id. None of my accounts, keys, or ids are included in the template.
+
 ## How it works
 
 A scheduled, AI-scored automation with one twist: it remembers its own previous
