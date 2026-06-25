@@ -6,6 +6,12 @@ Built with Zapier, RSS, an AI step, and Slack. No code, no scripting.
 
 ![Zap flow](images/zap-overview.png)
 
+## Use this template
+
+[Import this Zap on Zapier](https://zapier.com/templates/details/monitor-nova-scotia-healthcare-news-and-post-a-daily-slack-digest-302b01?secret=MTp0ZW1wbGF0ZTpxSEZ2TVBtSTQ1VFhESEVtUUdWekE1Y0pBSmF3cG9uNlRpdllxb0t0clZNOncxZ2hyZw)
+
+Connect your own Slack account and edit the feed URLs, relevance threshold, digest time, and channel when prompted. The AI classification logic is locked.
+
 ## Why I built it
 
 Healthcare coverage in Nova Scotia is spread across CBC, Global, and government press releases, and reading all of it every day is mostly noise. I wanted one morning digest that surfaces only the healthcare stories, scores how relevant each one is, and lands in a Slack channel, without standing up a paid media-monitoring tool.
@@ -25,11 +31,11 @@ Example output:
 ```
 Nova Scotia Healthcare: Daily Digest
 
-• Halifax ER wait times hit a record amid staffing shortages  (Relevance 88/100, Negative)
+- Halifax ER wait times hit a record amid staffing shortages  (Relevance 88/100, Negative)
 A new report points to chronic understaffing across the central zone.
 https://example.com/article-1
 
-• Vaccine booking now available at 811  (Relevance 95/100, Positive)
+- Vaccine booking now available at 811  (Relevance 95/100, Positive)
 Nova Scotians can now book vaccine appointments through the 811 service.
 https://example.com/article-2
 ```
@@ -83,4 +89,8 @@ Full step-by-step is in [setup.md](setup.md). In short:
 | `ai-prompt.md` | The AI prompt and the five structured output fields |
 | `setup.md` | Step-by-step Zap configuration |
 
+---
+
 All sample data is fictional. No real credentials, channels, or IDs are included.
+
+Part of the [zapier-exekyute-templates](../) collection. MIT licensed.
