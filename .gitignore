@@ -1,0 +1,15 @@
+# Secrets and local-only values (never commit)
+.env
+*.secret
+secrets.txt
+*-secrets.*
+
+# Block any secret/id reference files in any template folder
+*SECRET*
+*_SECRET*
+*_ID.txt
+STORAGE_SECRET.txt
+NOTION_DATABASE_ID.txt
+
+# Private build references, kept local
+BUILD-NOTES.md
