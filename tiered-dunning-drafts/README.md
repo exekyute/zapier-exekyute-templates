@@ -1,3 +1,5 @@
+> **Draft** — Screenshots and final walkthrough pending.
+
 # Tiered Dunning Drafts
 
 When an invoice is marked overdue in Xero, this Zap calculates how many days it has been past due, routes it into one of three aging buckets (30, 60, or 90+ days), and creates a tone-matched Gmail draft for each tier. No email is ever sent automatically.

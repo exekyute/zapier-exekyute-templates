@@ -1,3 +1,5 @@
+> **Draft** — Screenshots and final walkthrough pending.
+
 # Anniversary and Birthday Nudge
 
 Each morning at 8 AM, this Zap checks a Google Sheet for anyone on the team with a birthday or work anniversary today and sends a personalized Slack message for the match.

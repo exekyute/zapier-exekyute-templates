@@ -1,3 +1,5 @@
+> **Draft** — Screenshots and final walkthrough pending.
+
 # CSAT / NPS Router
 
 A no-code automation that reads a survey score when it comes in and routes the respondent to one of three outcomes: a Slack alert and a Notion follow-up item for detractors (0 to 6), a logged Notion entry for passives (7 to 8), and a Gmail draft for promoters (9 to 10).

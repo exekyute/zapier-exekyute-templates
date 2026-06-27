@@ -1,3 +1,5 @@
+> **Draft** — Screenshots and final walkthrough pending.
+
 # Pre-Call Brief Generator
 
 A no-code automation that fires when a new Calendly booking comes in, writes a one-page prep brief with an AI step, saves it to Google Docs, and sends the link to a Slack channel.

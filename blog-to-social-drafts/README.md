@@ -1,3 +1,5 @@
+> **Draft** — Screenshots and final walkthrough pending.
+
 # Blog Post to Social Media Drafts
 
 A no-code automation that watches an RSS feed for new blog posts, generates a LinkedIn draft and an X/Twitter draft in one AI step, saves both to a Notion page for review, and posts a Slack notification.
