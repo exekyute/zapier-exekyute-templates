@@ -12,6 +12,7 @@ Built with Zapier plus Notion, Slack, RSS, and AI steps. No code, no scripting.
 | [Nova Scotia Healthcare Media Monitor](ns-healthcare-media-monitor/) | Watches Nova Scotia news feeds, uses AI to flag healthcare stories, batches them, and posts one digest to Slack every morning. | RSS, Filter, AI, Digest, Slack |
 | [Blog Post to Social Media Drafts](blog-to-social-drafts/) | Watches a blog RSS feed, generates a LinkedIn draft and an X/Twitter draft in one AI step, saves both to a Notion page for review, and posts a Slack notification. | RSS, AI, Notion, Slack |
 | [Pre-Call Brief Generator](pre-call-brief-generator/) | When a Calendly booking comes in, generates a one-page prep brief with an AI step, saves it to Google Docs, and posts the link to a Slack channel. | Calendly, AI, Google Docs, Slack |
+| [Tiered Dunning Drafts](tiered-dunning-drafts/) | When an invoice is marked overdue in Xero, routes it by aging bucket (30 / 60 / 90+ days) and creates a tone-matched Gmail draft for each tier. No email sends automatically. | Xero, Filter, Formatter, Paths, Gmail |
 
 ## How these are organized
 
