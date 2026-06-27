@@ -10,6 +10,7 @@ Built with Zapier plus Notion, Slack, RSS, and AI steps. No code, no scripting.
 |---|---|---|
 | [Project Health Roll-up](project-health-rollup/) | Reads active projects from Notion each morning, scores each Green / Yellow / Red with AI, highlights what changed overnight, and posts one standup to Slack. | Schedule, Notion, AI, Storage, Slack |
 | [Nova Scotia Healthcare Media Monitor](ns-healthcare-media-monitor/) | Watches Nova Scotia news feeds, uses AI to flag healthcare stories, batches them, and posts one digest to Slack every morning. | RSS, Filter, AI, Digest, Slack |
+| [Blog Post to Social Media Drafts](blog-to-social-drafts/) | Watches a blog RSS feed, generates a LinkedIn draft and an X/Twitter draft in one AI step, saves both to a Notion page for review, and posts a Slack notification. | RSS, AI, Notion, Slack |
 
 ## How these are organized
 
