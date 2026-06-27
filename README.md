@@ -14,6 +14,7 @@ Built with Zapier plus Notion, Slack, RSS, and AI steps. No code, no scripting.
 | [Pre-Call Brief Generator](pre-call-brief-generator/) | When a Calendly booking comes in, generates a one-page prep brief with an AI step, saves it to Google Docs, and posts the link to a Slack channel. | Calendly, AI, Google Docs, Slack |
 | [CSAT / NPS Router](csat-nps-router/) | Routes survey responses by score: detractors get a Slack alert and a Notion follow-up item, passives are logged to Notion, and promoters get a Gmail draft for review. | Typeform, Paths, Notion, Slack, Gmail |
 | [Tiered Dunning Drafts](tiered-dunning-drafts/) | When an invoice is marked overdue in Xero, routes it by aging bucket (30 / 60 / 90+ days) and creates a tone-matched Gmail draft for each tier. No email sends automatically. | Xero, Filter, Formatter, Paths, Gmail |
+| [Anniversary and Birthday Nudge](anniversary-birthday-nudge/) | Checks a Google Sheet each morning for team members with a birthday or work anniversary today and sends a personalized Slack message for the match. | Schedule, Google Sheets, AI, Slack |
 
 ## How these are organized
 
