@@ -10,7 +10,8 @@ Built with Zapier plus Notion, Slack, RSS, and AI steps. No code, no scripting.
 |---|---|---|
 | [Project Health Roll-up](project-health-rollup/) | Reads active projects from Notion each morning, scores each Green / Yellow / Red with AI, highlights what changed overnight, and posts one standup to Slack. | Schedule, Notion, AI, Storage, Slack |
 | [Nova Scotia Healthcare Media Monitor](ns-healthcare-media-monitor/) | Watches Nova Scotia news feeds, uses AI to flag healthcare stories, batches them, and posts one digest to Slack every morning. | RSS, Filter, AI, Digest, Slack |
-| [Blog Post to Social Media Drafts](blog-to-social-drafts/) | Watches a blog RSS feed, generates a LinkedIn draft and an X/Twitter draft in one AI step, saves both to a Notion page for review, and posts a Slack notification. | RSS, AI, Notion, Slack |
+| [CSAT / NPS Router](csat-nps-router/) | Routes survey responses by score: detractors get a Slack alert and a Notion follow-up item, passives are logged to Notion, and promoters get a Gmail draft for review. | Typeform, Paths, Notion, Slack, Gmail |
+| [Tiered Dunning Drafts](tiered-dunning-drafts/) | When an invoice is marked overdue in Xero, routes it by aging bucket (30 / 60 / 90+ days) and creates a tone-matched Gmail draft for each tier. No email sends automatically. | Xero, Filter, Formatter, Paths, Gmail |
 
 ## How these are organized
 
