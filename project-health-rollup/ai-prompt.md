@@ -54,6 +54,9 @@ Rules:
 - Be specific and blunt in reasons (e.g. "milestone in 2 days, notes stale").
 - Do not invent projects or facts not present in the data.
 - Output ONLY the standup text, nothing before or after.
+- Each project must appear in EXACTLY ONE section (RED, YELLOW, or GREEN). Never list a project twice.
+- GREEN includes only projects not in RED or YELLOW. The number in parentheses must equal the count of names listed.
+- Always write the current date (from TODAY) right after "Morning standup -".
 
 YESTERDAY'S STANDUP:
 {{YESTERDAY_DIGEST}}

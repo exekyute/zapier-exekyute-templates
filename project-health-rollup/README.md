@@ -1,6 +1,6 @@
 # Project Health Roll-up
 
-A no-code automation that reads my active projects from Notion every morning, uses AI to score each one Green / Yellow / Red, highlights what changed since yesterday, and posts a single standup to Slack.
+A no-code automation that reads my active projects from Notion every weekday morning, uses AI to score each one Green / Yellow / Red, highlights what changed since yesterday, and sends a standup to Slack.
 
 Built with Zapier, Notion, an AI step, and Slack. No code, no scripting.
 
@@ -12,12 +12,12 @@ Project status usually lives scattered across notes and deadlines, and nobody re
 
 ## What it does
 
-Every morning it:
+Every weekday morning at 7:30 AM it:
 
 1. Pulls all Active projects from a Notion database.
 2. Sends them to an AI step that scores each project's health and writes a short, blunt reason.
 3. Compares today's scores against yesterday's and surfaces any changes at the top.
-4. Posts the finished standup to Slack as a single message.
+4. Sends the standup as a direct message in Slack.
 
 Example output:
 
@@ -44,11 +44,11 @@ GREEN (2): Vendor portal migration, Newsletter relaunch
 
 | Stage | What happens |
 |---|---|
-| Schedule | Fires once every morning |
+| Schedule | Fires every weekday at 7:30 AM |
 | Read memory | Loads yesterday's standup from storage |
-| Pull data | Fetches all Active projects from Notion |
+| Pull data | Queries Notion via API Request (Beta) for all Active projects |
 | Score + compare | AI rates each project and diffs against yesterday |
-| Notify | Posts the standup to Slack |
+| Notify | Sends the standup as a Slack direct message from bot "Project Standup" |
 | Save memory | Stores today's standup for tomorrow's comparison |
 
 The read-memory and save-memory stages are what let the standup lead with what changed overnight. A plain scheduled automation has no sense of yesterday; this one does.
