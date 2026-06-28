@@ -18,11 +18,11 @@ Map the three placeholders to the RSS trigger fields (Title, Link, Description).
 
 | Field | Type | Description |
 |---|---|---|
+| `summary` | Text | One plain sentence summarizing the article. No line breaks. |
 | `category` | Text, required | Exactly `NS Healthcare` if the article is about healthcare in Nova Scotia (hospitals, ERs, Nova Scotia Health, IWK, doctors, nurses, wait times, long-term care, mental health, public health, or NS health policy / funding). Otherwise exactly `Skip`. |
 | `relevance` | Number | Integer 0 to 100, how central Nova Scotia healthcare is to the article. |
 | `sentiment` | Text | Exactly one of: Positive, Neutral, Negative. |
 | `entities` | Text | Comma-separated organizations or people mentioned (e.g. Nova Scotia Health, IWK), or `None`. |
-| `summary` | Text | One plain sentence summarizing the article. No line breaks. |
 
 ## Why structured fields instead of one text response
 

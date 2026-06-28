@@ -23,7 +23,7 @@ Through the day it:
 1. Watches several Nova Scotia news feeds and picks up each new article.
 2. Drops obvious non-health items with a free keyword filter before any paid step runs.
 3. Sends the rest to an AI step that returns a category, a 0 to 100 relevance score, sentiment, key entities, and a one-sentence summary.
-4. Keeps only genuine Nova Scotia healthcare stories above a relevance threshold.
+4. Keeps only articles where category is NS Healthcare and relevance is above 30.
 5. Collects the matches and releases them as one Slack message at 7am Atlantic, then resets for the next day.
 
 Example output:
@@ -47,9 +47,9 @@ https://example.com/article-2
 | RSS trigger | Fires on each new article across the chosen feeds |
 | Keyword filter | Free pre-filter that drops non-health items |
 | AI gate + score | Classifies, scores relevance and sentiment, tags entities, summarizes |
-| Relevance filter | Keeps only NS healthcare items above the threshold |
-| Digest | Batches matches and releases once each morning |
-| Slack | Posts the combined digest to a channel |
+| Relevance filter | Keeps articles where category is NS Healthcare and relevance is above 30 |
+| Digest | Batches matches and releases once each morning at 7am |
+| Slack | Posts the digest to a channel from bot "NS Health Monitor" |
 
 The keyword filter is the cost control: the AI step only runs on the handful of articles that survive it, so a busy news day does not blow through task limits.
 

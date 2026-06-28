@@ -49,6 +49,7 @@ Anything tagged `Skip` or scoring 30 or below stops here.
 ```
 
 - Frequency: Daily, 7:00am, Atlantic time
+- Trigger on weekends: Yes
 - Delete Digest on Release: Yes (so each morning starts fresh)
 
 ## 6. Slack, Send Channel Message
@@ -63,6 +64,8 @@ Anything tagged `Skip` or scoring 30 or below stops here.
 ```
 
 - Send as a bot: Yes
+- Bot Name: NS Health Monitor
+- Bot Icon: :hospital:
 - Auto-Expand Links: No (keeps the digest compact)
 
 ## How it runs
