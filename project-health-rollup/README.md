@@ -99,4 +99,4 @@ The exact wording lives in [ai-prompt.md](ai-prompt.md).
 
 All sample data is fictional. No real project names, credentials, or IDs are included.
 
-Part of the [zapier-exekyute-templates](../) collection. MIT licensed.
+Part of the [zapier-exekyute-templates](../README.md) collection. MIT licensed.
