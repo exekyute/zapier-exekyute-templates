@@ -93,4 +93,4 @@ Full step-by-step is in [setup.md](setup.md). In short:
 
 All sample data is fictional. No real credentials, channels, or IDs are included.
 
-Part of the [zapier-exekyute-templates](../) collection. MIT licensed.
+Part of the [zapier-exekyute-templates](../README.md) collection. MIT licensed.
