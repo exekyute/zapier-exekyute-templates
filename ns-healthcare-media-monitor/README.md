@@ -1,10 +1,10 @@
 # Nova Scotia Healthcare Media Monitor
 
-A no-code automation that watches Nova Scotia news feeds, uses AI to flag the stories about healthcare in the province, batches them through the day, and posts a single digest to Slack every morning.
+Watch several Nova Scotia news feeds, use an AI step to flag the stories about healthcare in the province, batch them through the day, and post a single digest to Slack every morning. A free keyword filter runs first and drops the obvious non-health items, so the paid AI step only sees the handful of articles that survive it.
 
-Built with Zapier, RSS, an AI step, and Slack. No code, no scripting.
+Built with Zapier, plus RSS, an AI step, and Slack. No code, no scripting.
 
-![Zap flow](images/zap-overview.png)
+![The Zap on the Zapier canvas, running from an RSS trigger through a keyword filter and the AI gate into the digest and Slack.](images/zap-overview.png)
 
 ## Use this template
 
@@ -12,19 +12,26 @@ Built with Zapier, RSS, an AI step, and Slack. No code, no scripting.
 
 Connect your own Slack account and edit the feed URLs, relevance threshold, digest time, and channel when prompted. The AI classification logic is locked.
 
-## Why I built it
+## Use it when
 
-Healthcare coverage in Nova Scotia is spread across CBC, Global, and government press releases, and reading all of it every day is mostly noise. I wanted one morning digest that surfaces only the healthcare stories, scores how relevant each one is, and lands in a Slack channel, without standing up a paid media-monitoring tool.
+- Healthcare coverage in Nova Scotia is spread across CBC, Global, and government press releases, and reading all of it every day is mostly noise.
+- You want only the healthcare stories, each scored for relevance, landing in one Slack channel each morning.
+- You would rather not stand up a paid media-monitoring service for a single beat in a single province.
 
-## What it does
+## How it works
 
-Through the day it:
+An RSS trigger fires on each new article across the chosen feeds, a free keyword filter drops the obvious non-health items, and the AI step classifies, scores, and summarizes what is left. A second filter keeps only NS Healthcare articles scoring above 30, a Digest step collects the matches through the day, and Slack posts them as one message each morning.
 
-1. Watches several Nova Scotia news feeds and picks up each new article.
-2. Drops obvious non-health items with a free keyword filter before any paid step runs.
-3. Sends the rest to an AI step that returns a category, a 0 to 100 relevance score, sentiment, key entities, and a one-sentence summary.
-4. Keeps only articles where category is NS Healthcare and relevance is above 30.
-5. Collects the matches and releases them as one Slack message at 7am Atlantic, then resets for the next day.
+| Stage | What happens |
+|---|---|
+| RSS trigger | Fires on each new article across the chosen feeds |
+| Keyword filter | Free pre-filter that drops non-health items |
+| AI gate + score | Classifies, scores relevance and sentiment, tags entities, summarizes |
+| Relevance filter | Keeps articles where category is NS Healthcare and relevance is above 30 |
+| Digest | Batches matches and releases once each morning at 7am |
+| Slack | Posts the digest to a channel from bot "NS Health Monitor" |
+
+The keyword filter is the cost control: the AI step only runs on the handful of articles that survive it, so a busy news day does not blow through task limits.
 
 Example output:
 
@@ -40,28 +47,11 @@ Nova Scotians can now book vaccine appointments through the 811 service.
 https://example.com/article-2
 ```
 
-## How it works
+## Requirements
 
-| Stage | What happens |
-|---|---|
-| RSS trigger | Fires on each new article across the chosen feeds |
-| Keyword filter | Free pre-filter that drops non-health items |
-| AI gate + score | Classifies, scores relevance and sentiment, tags entities, summarizes |
-| Relevance filter | Keeps articles where category is NS Healthcare and relevance is above 30 |
-| Digest | Batches matches and releases once each morning at 7am |
-| Slack | Posts the digest to a channel from bot "NS Health Monitor" |
-
-The keyword filter is the cost control: the AI step only runs on the handful of articles that survive it, so a busy news day does not blow through task limits.
-
-## Feeds
-
-Defaults monitor:
-
-- CBC Nova Scotia
-- Global News Halifax
-- Government of Nova Scotia, Health and Wellness news releases
-
-Any RSS or Atom feed works. Swap in your own in the trigger.
+- A Zapier account with RSS by Zapier, Filter, AI by Zapier, and Digest by Zapier.
+- A Slack workspace and a channel for the digest.
+- The RSS or Atom feed URLs you want to watch. Defaults are provided.
 
 ## Setup
 
@@ -74,12 +64,16 @@ Full step-by-step is in [setup.md](setup.md). In short:
 5. Digest by Zapier, daily release time.
 6. Slack, Send Channel Message with the digest.
 
-## Stack
+## Feeds
 
-- Zapier for scheduling, filtering, batching, and delivery
-- RSS by Zapier for the feeds
-- AI by Zapier for classification and scoring
-- Slack for the daily delivery
+Defaults monitor CBC Nova Scotia, Global News Halifax, and the Government of Nova Scotia Health and Wellness news releases. Any RSS or Atom feed works; swap in your own in the trigger.
+
+## Customize
+
+- Feeds: replace the default CBC, Global, and government feeds with any RSS or Atom URLs in the trigger.
+- Threshold: the gate keeps articles scoring above 30; raise or lower it in the second filter.
+- Digest time: change the 7am Atlantic release in the Digest step.
+- Beat: to track a different topic, edit the prompt and the five output fields in `ai-prompt.md` and rebuild from the folder rather than the guided import.
 
 ## What is in this folder
 
