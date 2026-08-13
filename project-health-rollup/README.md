@@ -6,6 +6,12 @@ Built with Zapier, plus Notion, an AI step, and Slack. No code, no scripting.
 
 ![The morning standup posted to Slack, with a changed-overnight section above the red, yellow, and green groups.](images/slack-standup.png)
 
+## Use this template
+
+[Import this Zap on Zapier](https://zapier.com/templates/details/daily-project-health-standup-notion-to-slack-with-ai-scoring-75c23a?secret=MTp0ZW1wbGF0ZTpKRkhVVDVkR1hXMDhkWk9Bb0xVTTdfY182ZURaTlVISTBWQW55X1NmMno4OmVlcnhiMw)
+
+Connect your own Notion and Slack accounts, paste your own Notion database id, and pick where the standup lands when prompted. The scoring rules and the standup format are locked. Budget about ten minutes, and share the Notion database with your Notion connection before the first run or the query comes back empty.
+
 ## Use it when
 
 - Project status is scattered across notes and deadlines and nobody re-reads it, so the things that slipped overnight are what you find out about last.
