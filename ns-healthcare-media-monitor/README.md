@@ -82,6 +82,7 @@ Defaults monitor CBC Nova Scotia, Global News Halifax, and the Government of Nov
 | `README.md` | This overview |
 | `ai-prompt.md` | The AI prompt and the five structured output fields |
 | `setup.md` | Step-by-step Zap configuration |
+| `images/` | The Zap canvas |
 
 ---
 

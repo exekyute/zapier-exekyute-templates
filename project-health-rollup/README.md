@@ -29,6 +29,26 @@ A weekday schedule fires, a Storage step loads yesterday's standup, and an API R
 
 The read-memory and save-memory steps are what let the standup lead with what changed overnight. A plain scheduled automation has no sense of yesterday; this one does. The hero screenshot above shows a full standup: a changed-overnight block, then the red, yellow, and green groups.
 
+Example output:
+
+```
+Morning standup - 2026-06-02
+
+⚡ CHANGED OVERNIGHT
+- Vendor portal migration: Red -> Green (blocker cleared, back on schedule)
+- Onboarding kit v2: Green -> Red (milestone in 2 days, reviewer out)
+
+🔴 RED
+- Henley pitch deck: milestone passed/near, slides half done
+- Onboarding kit v2: milestone in 2 days, no progress, reviewer out
+
+🟡 YELLOW
+- Q3 budget review: milestone within a week, awaiting replies
+- Website copy refresh: no update in ~12 days, paused
+
+🟢 GREEN (2): Vendor portal migration, Newsletter relaunch
+```
+
 ## Requirements
 
 - A Zapier account. Storage by Zapier holds the day-to-day memory and runs on the free plan.
@@ -38,12 +58,16 @@ The read-memory and save-memory steps are what let the standup lead with what ch
 
 ## Setup
 
+Full step-by-step is in [setup.md](setup.md). In short:
+
 1. Schedule by Zapier: every weekday at 7:30 AM.
 2. Storage by Zapier (Get): load the saved standup under a constant key. The first run returns FIRST RUN.
 3. Notion via API Request (Beta): query the database for projects where Status is Active.
 4. AI by Zapier: paste the prompt from [ai-prompt.md](ai-prompt.md) and map its three values (today's date, yesterday's standup, the Notion response).
 5. Slack: send the AI output as a direct message from bot "Project Standup".
 6. Storage by Zapier (Set): save today's standup under the same key for tomorrow.
+
+The two Storage steps use the same key and only work as a pair. Build them together.
 
 ## The data model
 
@@ -84,8 +108,10 @@ The exact wording lives in [ai-prompt.md](ai-prompt.md).
 |---|---|
 | `README.md` | This overview |
 | `ai-prompt.md` | The AI scoring and change-detection prompt |
+| `setup.md` | Step-by-step Zap configuration |
 | `projects-day1.csv` | Sample data, ready to import into Notion |
-| `synthetic-data.md` | Notes on the fictional sample dataset |
+| `synthetic-data.md` | The seeded test: expected output and the two edits that prove change detection |
+| `images/` | The Zap canvas, the Notion database, and the Slack standup |
 
 ---
 
