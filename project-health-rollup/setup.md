@@ -40,6 +40,8 @@ The built-in Notion actions read pages one at a time. Querying a whole database 
 
 Replace `<NOTION_DB_ID>` with your own database ID and keep the real value out of the repo. If your Status column is a Status property rather than a Select property, swap the `select` key for `status`; Notion rejects the filter otherwise. If the call comes back complaining about the API version, add a `Notion-Version` header of `2022-06-28`.
 
+Share the database with your Notion connection before you test this step. An unshared database does not error, it returns an empty result list, so the Zap looks like it works and the standup comes back with nothing in it.
+
 Filtering here rather than later is the cost control. On hold and Done rows never leave Notion, so the AI step is never paid to read them.
 
 ## 4. AI by Zapier, Analyze and Return Data

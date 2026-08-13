@@ -8,11 +8,11 @@ Both share the same working habits: a free Filter step in front of anything that
 
 ## Templates
 
-**2 templates**, one folder each. Where a template is also published as a shared Zap, hit **Import** to open it on Zapier.
+**2 templates**, one folder each. Both are also published as shared Zaps; hit **Import** on a row to open it on Zapier.
 
 | Template | What it does | Stack |
 |---|---|---|
-| [Project Health Roll-up](project-health-rollup/) | Reads active projects from Notion each morning, scores each Green / Yellow / Red with AI, highlights what changed overnight, and posts one standup to Slack. | Schedule, Notion, AI, Storage, Slack |
+| [Project Health Roll-up](project-health-rollup/) · [Import](https://zapier.com/templates/details/daily-project-health-standup-notion-to-slack-with-ai-scoring-75c23a?secret=MTp0ZW1wbGF0ZTpKRkhVVDVkR1hXMDhkWk9Bb0xVTTdfY182ZURaTlVISTBWQW55X1NmMno4OmVlcnhiMw) | Reads active projects from Notion each morning, scores each Green / Yellow / Red with AI, highlights what changed overnight, and posts one standup to Slack. | Schedule, Notion, AI, Storage, Slack |
 | [Nova Scotia Healthcare Media Monitor](ns-healthcare-media-monitor/) · [Import](https://zapier.com/templates/details/monitor-nova-scotia-healthcare-news-and-post-a-daily-slack-digest-302b01?secret=MTp0ZW1wbGF0ZTpxSEZ2TVBtSTQ1VFhESEVtUUdWekE1Y0pBSmF3cG9uNlRpdllxb0t0clZNOncxZ2hyZw) | Watches Nova Scotia news feeds, uses AI to flag healthcare stories, batches them, and posts one digest to Slack every morning. | RSS, Filter, AI, Digest, Slack |
 
 ## How these are organized
